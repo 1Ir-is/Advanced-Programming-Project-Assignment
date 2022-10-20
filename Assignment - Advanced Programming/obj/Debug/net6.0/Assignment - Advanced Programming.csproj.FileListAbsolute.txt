@@ -1,0 +1,15 @@
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\bin\Debug\net6.0\Assignment - Advanced Programming.exe
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\bin\Debug\net6.0\Assignment - Advanced Programming.deps.json
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\bin\Debug\net6.0\Assignment - Advanced Programming.runtimeconfig.json
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\bin\Debug\net6.0\Assignment - Advanced Programming.dll
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\bin\Debug\net6.0\Assignment - Advanced Programming.pdb
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\Assignment - Advanced Programming.csproj.AssemblyReference.cache
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\Assignment - Advanced Programming.GeneratedMSBuildEditorConfig.editorconfig
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\Assignment - Advanced Programming.AssemblyInfoInputs.cache
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\Assignment - Advanced Programming.AssemblyInfo.cs
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\Assignment - Advanced Programming.csproj.CoreCompileInputs.cache
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\Assignment - Advanced Programming.dll
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\refint\Assignment - Advanced Programming.dll
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\Assignment - Advanced Programming.pdb
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\Assignment - Advanced Programming.genruntimeconfig.cache
+E:\Advanced Programming\Bai tap\Assignment - Advanced Programming\Assignment - Advanced Programming\obj\Debug\net6.0\ref\Assignment - Advanced Programming.dll
