@@ -41,7 +41,7 @@ namespace Assignment___Advanced_Programming
 
         public override string GetType()
         {
-            return "POP";
+            return "POP MUSIC";
         }
     }
 }

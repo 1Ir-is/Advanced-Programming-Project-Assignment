@@ -42,7 +42,7 @@ namespace Assignment___Advanced_Programming
 
         public override string GetType()
         {
-            return "EDM";
+            return "EDM MUSIC";
         }
     }
 }

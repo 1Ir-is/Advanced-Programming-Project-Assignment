@@ -15,8 +15,9 @@ namespace Assignment___Advanced_Programming
         public const int show_pop = 4;
         public const int show_by_id = 5;
         public const int show_by_name = 6;
-        public const int remove_by_id = 7;
-        public const int update_by_id = 8;
+        public const int show_by_name_of_artist = 7;
+        public const int remove_by_id = 8;
+        public const int update_by_id = 9;
         public const int exit = 0;
 
         public const string add_type_musicDisc = "";

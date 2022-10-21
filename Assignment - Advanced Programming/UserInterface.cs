@@ -17,15 +17,16 @@ namespace Assignment___Advanced_Programming
 
         public static int menuOption()
         {
-            WriteLine("||   1. Add Music Disc.                    ");
-            WriteLine("||   2. Show Information Of All Disc.");
-            WriteLine("||   3. Show EDM Music Disc.");
-            WriteLine("||   4. Show POP Music Disc.");
-            WriteLine("||   5. Show Music Disc By Id.");
-            WriteLine("||   6. Show Music Disc By Name.");
-            WriteLine("||   7. Remove Disc By Id.");
-            WriteLine("||   8. Update Disc By Id.");
-            WriteLine("||   0. Exit.");
+            WriteLine("||   1. Add Music Disc.                      ||");
+            WriteLine("||   2. Show Information Of All Disc.        ||");
+            WriteLine("||   3. Show EDM Music Disc.                 ||");
+            WriteLine("||   4. Show POP Music Disc.                 ||");
+            WriteLine("||   5. Show Music Disc By Id.               ||");
+            WriteLine("||   6. Show Music Disc By Name.             ||");
+            WriteLine("||   7. Show Music Disc By Name Of Artist.   ||");
+            WriteLine("||   8. Remove Disc By Id.                   ||");
+            WriteLine("||   9. Update Disc By Id.                   ||");
+            WriteLine("||   0. Exit.                                ||");
             Write(" Enter your option: ");
             return int.Parse(ReadLine());
         }

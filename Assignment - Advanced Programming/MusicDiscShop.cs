@@ -15,6 +15,7 @@ namespace Assignment___Advanced_Programming
 
         public MusicDiscShop() { }
 
+        // CHECK ID
         public bool checkID(int id)
         {
             MusicDisc discList = musicDiscs.FirstOrDefault(i => i.Id.Equals(id));
@@ -24,7 +25,10 @@ namespace Assignment___Advanced_Programming
             }
             return false;
         }
+        // End
 
+
+        // ADD MUSIC DISC
         public void AddMusicDisc(MusicDisc musicDisc)
         {
             try
@@ -43,55 +47,37 @@ namespace Assignment___Advanced_Programming
                 WriteLine(e.Message);
             }
         }
+        // END
 
-        public MusicDisc FindDiscById(int id)
+
+        // DISPLAY MUSIC INFORMATION
+        public string PrintAllDisc()
         {
-            MusicDisc searchResult = null;
-            if (musicDiscs != null && musicDiscs.Count > 0)
+            var result = new StringBuilder();
+            foreach (var md in musicDiscs)
             {
-                foreach (MusicDisc md in musicDiscs)
-                {
-                    if (md.Id == id)
-                    {
-                        searchResult = md;
-                    }
-                }
+                result.AppendLine(md.DisplayMusicInfo());
             }
-            return searchResult;
+            return result.ToString();
         }
+        // END
 
-        public List<MusicDisc> GetMusicDiscsByName(string name)
-        {
-            var result = new List<MusicDisc>();
-            result = musicDiscs.Where(i => i.Name.Equals(name)).ToList();
-            return result;
-        }
 
-        public bool DeleteById(int id)
-        {
-            bool isDelete = false;
-            MusicDisc md = FindDiscById(id);
-            if (md != null)
-            {
-                isDelete = musicDiscs.Remove(md);
-            }
-            return isDelete;
-        }
-
-        public void UpdateById(int id)
+        // UPDATE BY ID
+        public bool UpdateById(int id)
         {
             try
             {
                 MusicDisc md = musicDiscs.FirstOrDefault(i => i.Id.Equals(id));
                 if (md != null)
                 {
-                    WriteLine("Enter new name: ");
+                    Write("Enter new name: ");
                     string name = ReadLine();
-                    WriteLine("Enter new name of artist: ");
+                    Write("Enter new name of artist: ");
                     string artist = ReadLine();
-                    WriteLine("Enter new year: ");
+                    Write("Enter new year: ");
                     int year = int.Parse(ReadLine());
-                    WriteLine("Enter new price: ");
+                    Write("Enter new price: ");
                     decimal price = decimal.Parse(ReadLine());
                     md.Name = name;
                     md.Artist = artist;
@@ -107,6 +93,62 @@ namespace Assignment___Advanced_Programming
             {
                 WriteLine(e.Message);
             }
+            return false;
         }
+        // END   
+
+
+        // DELETE BY ID
+        public bool DeleteById(int id)
+        {
+            MusicDisc md = musicDiscs.FirstOrDefault(i => i.Id.Equals(id));
+            if (md != null)
+            {
+                musicDiscs.Remove(md);
+                return true;
+            }
+            return false;
+        }
+        // END
+
+
+        // FIND DISC BY ID
+        public string GetMusicDiscById(int id)
+        {
+            MusicDisc md = musicDiscs.FirstOrDefault(i => i.Id.Equals(id));
+            if (md != null)
+            {
+                return md.DisplayMusicInfo();
+
+            }
+                return " Id does not exist, please enter again!";
+        }
+        // END
+
+
+        // FIND DISC BY NAME
+        public string GetMusicDiscsByName(string name)
+        {
+            var result = new StringBuilder();
+            foreach (var md in musicDiscs.Where(n => n.Name.Equals(name)))
+            {
+                result.AppendLine(md.DisplayMusicInfo());
+            }
+            return result.ToString();
+        }
+        // END
+
+        
+        // FIND DISC BY NAME OF ARTIST
+        public string GetMusicDiscByArtist(string artist)
+        {
+            var result = new StringBuilder();
+            foreach (var md in musicDiscs.Where(a => a.Artist.Equals(artist)))
+            {
+                result.AppendLine(md.DisplayMusicInfo());
+            }
+            return result.ToString();
+        }
+        // END
     }
 }
