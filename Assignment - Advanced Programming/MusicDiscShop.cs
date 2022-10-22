@@ -64,40 +64,67 @@ namespace Assignment___Advanced_Programming
         }
         // END
 
-        // DISPLAY ALL EDM INFO
+
+        // DISPLAY ALL EDM DISC INFO
         public void PrintAllEdm()
         {
+            WriteLine(" ==================EDM LIST==================");
             foreach (var edmMusic in musicDiscs)
             {
-                edmMusic.DisplayMusicInfo().GetType().Equals("EDM MUSIC");
+                if (edmMusic.GetTitle().Equals("EDM Music Disc List"))
+                {
+                    WriteLine($" || Id: {edmMusic.Id}");
+                    WriteLine($" || Type: {edmMusic.GetType()}");
+                    WriteLine($" || Name: {edmMusic.Name}");
+                    WriteLine($" || Artist: {edmMusic.Artist}");
+                    WriteLine($" || Description: {edmMusic.Description}");
+                    WriteLine($" || Price: {edmMusic.Price}");
+                    WriteLine($" || Year: {edmMusic.Year}");
+                    WriteLine(" ============================================");
+                    WriteLine();
+                }
             }
         }
+        // END
+
+
+        // DISPLAY ALL POP DISC INFO
+        public void PrintAllPop()
+        {
+            WriteLine("==================POP LIST==================");
+            foreach (var edmMusic in musicDiscs)
+            {
+                if (edmMusic.GetTitle().Equals("POP Music Disc List"))
+                {
+                    WriteLine($" || Id: {edmMusic.Id}");
+                    WriteLine($" || Type: {edmMusic.GetType()}");
+                    WriteLine($" || Name: {edmMusic.Name}");
+                    WriteLine($" || Artist: {edmMusic.Artist}");
+                    WriteLine($" || Description: {edmMusic.Description}");
+                    WriteLine($" || Price: {edmMusic.Price}");
+                    WriteLine($" || Year: {edmMusic.Year}");
+                    WriteLine(" ============================================");
+                    WriteLine();
+                }
+            }
+            
+        }
+        // END
 
 
         // UPDATE BY ID
-        public bool UpdateById(int id)
+        public bool UpdateById(int id,string name, string artist, int year, decimal price)
         {
             try
             {
                 MusicDisc md = musicDiscs.FirstOrDefault(i => i.Id.Equals(id));
                 if (md != null)
                 {
-                    Write(" Enter new name: ");
-                    string name = ReadLine();
-                    Write(" Enter new name of artist: ");
-                    string artist = ReadLine();
-                    Write(" Enter new year: ");
-                    int year = int.Parse(ReadLine());
-                    Write(" Enter new price: ");
-                    decimal price = decimal.Parse(ReadLine());
                     md.Name = name;
                     md.Artist = artist;
                     md.Year = year;
                     md.Price = price;
-                }
-                else
-                {
-                    WriteLine(" Id is invalid, please enter again!");
+                    return true;
                 }
             }
             catch (ArgumentException e)

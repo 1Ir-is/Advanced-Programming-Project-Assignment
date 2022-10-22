@@ -33,14 +33,7 @@ namespace Assignment___Advanced_Programming
         public int Id
         {
             get => id;
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentException(" Id is not valid!");
-                }
-                this.id = value;
-            }
+            set => id = value;
         }
 
         public string Name
