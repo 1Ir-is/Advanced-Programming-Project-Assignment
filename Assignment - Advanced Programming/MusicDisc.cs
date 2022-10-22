@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace Assignment___Advanced_Programming
 {
@@ -32,7 +33,14 @@ namespace Assignment___Advanced_Programming
         public int Id
         {
             get => id;
-            set => id = value;
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException(" Id is not valid!");
+                }
+                this.id = value;
+            }
         }
 
         public string Name
@@ -42,7 +50,7 @@ namespace Assignment___Advanced_Programming
             {
                 if (value.Length < 3)
                 {
-                    throw new ArgumentException("Name of the song is not valid!");
+                    throw new ArgumentException(" Name of the song is not valid!");
                 }
 
                 this.name = value;
@@ -57,7 +65,7 @@ namespace Assignment___Advanced_Programming
                 var indexOf = value.IndexOf(' ');
                 if (char.IsDigit(value[indexOf + 1]))
                 {
-                    throw new ArgumentException("Artist is not valid!");
+                    throw new ArgumentException(" Artist name is not valid!");
                 }
 
                 this.artist = value;
@@ -80,7 +88,7 @@ namespace Assignment___Advanced_Programming
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentException("Year is not valid!");
+                    throw new ArgumentException(" Year is not valid!");
                 }
 
                 this.year = value;
@@ -94,7 +102,7 @@ namespace Assignment___Advanced_Programming
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentException("Price is not valid!");
+                    throw new ArgumentException(" Price is not valid!");
                 }
 
                 this.price = value;
@@ -102,6 +110,7 @@ namespace Assignment___Advanced_Programming
         }
 
 
+        public abstract string GetTitle();
         public abstract string GetType();
         public abstract string DisplayMusicInfo();
         

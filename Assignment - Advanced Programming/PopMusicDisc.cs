@@ -28,13 +28,14 @@ namespace Assignment___Advanced_Programming
         public override string DisplayMusicInfo()
         {
             var sb = new StringBuilder();
-            sb.Append("Id: ").AppendLine($"{this.Id}")
-              .Append("Type: ").AppendLine(this.GetType())
-              .Append("Name: ").AppendLine(this.Name)
-              .Append("Artist: ").AppendLine(this.Artist)
-              .Append("Description: ").AppendLine(this.Description)
-              .Append("Year: ").AppendLine($"{this.Year}")
-              .Append("Price: ").Append($"{this.Price:f1}");
+            sb.Append("|| Id: ").AppendLine($"{this.Id}")
+              .Append("|| Type: ").AppendLine(this.GetType())
+              .Append("|| Name: ").AppendLine(this.Name)
+              .Append("|| Artist: ").AppendLine(this.Artist)
+              .Append("|| Description: ").AppendLine(this.Description)
+              .Append("|| Year: ").AppendLine($"{this.Year}")
+              .Append("|| Price: ").Append($"{this.Price:f1}")
+              .AppendLine();
 
             return sb.ToString();
         }
@@ -42,6 +43,11 @@ namespace Assignment___Advanced_Programming
         public override string GetType()
         {
             return "POP MUSIC";
+        }
+
+        public override string GetTitle()
+        {
+            return "POP Music Disc List";
         }
     }
 }

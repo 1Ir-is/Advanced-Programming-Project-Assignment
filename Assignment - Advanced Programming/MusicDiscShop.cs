@@ -13,6 +13,8 @@ namespace Assignment___Advanced_Programming
     {
         private List<MusicDisc> musicDiscs = new List<MusicDisc>();
 
+        MusicDisc musicDisc1 = new EdmMusicDisc();
+
         public MusicDiscShop() { }
 
         // CHECK ID
@@ -35,7 +37,7 @@ namespace Assignment___Advanced_Programming
             {
                 if (checkID(musicDisc.Id))
                 {
-                    throw new ArgumentException("Duplicate Id, Please enter again!");
+                    throw new ArgumentException(" Id is duplicated, Please enter again!");
                 }
                 else
                 {
@@ -62,6 +64,15 @@ namespace Assignment___Advanced_Programming
         }
         // END
 
+        // DISPLAY ALL EDM INFO
+        public void PrintAllEdm()
+        {
+            foreach (var edmMusic in musicDiscs)
+            {
+                edmMusic.DisplayMusicInfo().GetType().Equals("EDM MUSIC");
+            }
+        }
+
 
         // UPDATE BY ID
         public bool UpdateById(int id)
@@ -71,13 +82,13 @@ namespace Assignment___Advanced_Programming
                 MusicDisc md = musicDiscs.FirstOrDefault(i => i.Id.Equals(id));
                 if (md != null)
                 {
-                    Write("Enter new name: ");
+                    Write(" Enter new name: ");
                     string name = ReadLine();
-                    Write("Enter new name of artist: ");
+                    Write(" Enter new name of artist: ");
                     string artist = ReadLine();
-                    Write("Enter new year: ");
+                    Write(" Enter new year: ");
                     int year = int.Parse(ReadLine());
-                    Write("Enter new price: ");
+                    Write(" Enter new price: ");
                     decimal price = decimal.Parse(ReadLine());
                     md.Name = name;
                     md.Artist = artist;
@@ -86,7 +97,7 @@ namespace Assignment___Advanced_Programming
                 }
                 else
                 {
-                    WriteLine("Enter a valid Id!");
+                    WriteLine(" Id is invalid, please enter again!");
                 }
             }
             catch (ArgumentException e)
